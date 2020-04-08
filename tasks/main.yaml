@@ -1,0 +1,7 @@
+---
+- name: "Install lvm2"
+  package:
+    pkg: "{{ install_lvm2_packages[(ansible_os_family | lower) + '_' + (ansible_architecture | lower)] }}"
+    state: "present"
+  tags:
+    - "lvm2"
